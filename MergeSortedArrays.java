@@ -1,4 +1,10 @@
-class MergeSortedArrays {
+ class MergeSortedArrays {
+    /**
+     * @param nums1
+     * @param m
+     * @param nums2
+     * @param n
+     */
     public static void  merge(int[] nums1, int m, int[] nums2, int n) {
         
     	System.out.println("nums length ? "+nums1.length);
@@ -15,24 +21,32 @@ class MergeSortedArrays {
     		return;
     	}
     	
-    	while(index >= 0 && i >= 0 && j >= 0) {
-    		System.out.println(nums1[i]+"  "+nums2[j]);
-    		if(nums1[i] >= nums2[j]) {
-    			nums1[index--] = nums1[i--];
+    	while(index >= 0 && (i >= 0 || j >= 0)) {
+    		//System.out.println(nums1[i]+"  "+nums2[j]);
+    		if( i>= 0 && j >= 0) {
+    			System.out.println("i and j inside if "+i +" "+ j);
+	    		if(nums1[i] >= nums2[j]) {
+	    			nums1[index--] = nums1[i--];
+	    		}
+	    		else {
+	    			nums1[index--] = nums2[j--];
+	    		}
     		}
-    		else {
-    			nums1[index--] = nums2[j--];
-    		}
+//    		else {
+//    			while(index < 0) {
+//    				nums1[index--] = nums
+//    			}
+//    		}
     	}
     	System.out.println("indx is ? "+index);
-    	while(index <= 0) {
+    	/*while(index <= 0) {
     		if(i >= 0 && j < 0) {
     			nums1[index--] = nums1[i--];
     		}
     		else {
     			nums1[index--] = nums2[j--];
     		}
-    	}
+    	}*/
     	  	
     	for(int r = 0 ; r < nums1.length ; r++) {
     		System.out.println(nums1[r]);
