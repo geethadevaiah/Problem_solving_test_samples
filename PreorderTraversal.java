@@ -6,11 +6,19 @@ public class PreorderTraversal {
 
 	public static List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> order = new ArrayList<>();
-        order.add(root.val);
-        preorderTraversal(root.left);
-        preorderTraversal(root.right);
+        traverseTreePreorder(root, order);
         return order;
     }
+	
+	public static void traverseTreePreorder(TreeNode root, List<Integer> order) {
+		if(root != null) {
+			order.add(root.val);
+			if(root.left != null)
+				traverseTreePreorder(root.left, order);
+			if(root.right != null)
+				traverseTreePreorder(root.right, order);
+		}
+	}
 	
 	public static void main(String[] args) {
 
