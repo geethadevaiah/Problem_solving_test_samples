@@ -26,8 +26,8 @@ public class RotateTheArrayAtK {
 		if(k == 0) return ;
 		int prev = 0, currIndex = 0, temp = 0, count = 0;
 		for(int start = 0 ; count < nums.length ; start++) {
-			prev = nums[0];
-			currIndex = 0;
+			prev = nums[start];
+			currIndex = start;
 			// keep rotating till reach the initial point
 			do {
 				int nextIndex = (currIndex + k) % n;
@@ -37,7 +37,7 @@ public class RotateTheArrayAtK {
 				currIndex = nextIndex;
 				count++;
 				
-			} while(0 != currIndex);
+			} while(start != currIndex);
 		}
 	}
 	
@@ -49,7 +49,7 @@ public class RotateTheArrayAtK {
 			System.out.println(in[i]);
 		int[] in1 = {-1,-100,3,99};
 		rotate1(in1, 2);
-		for(int i = 0 ; i < in.length ; i++)
+		for(int i = 0 ; i < in1.length ; i++)
 			System.out.println(in1[i]);
 	}
 }
