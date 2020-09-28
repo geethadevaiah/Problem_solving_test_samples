@@ -4,25 +4,15 @@ public class SpecialStringAgain {
 
 	// WORKING!!!
 	public static long substrCount(String str, int n ) {
-		    // store count of special 
-		    // Palindromic substring 
+		    // store count of special Palindromic substring 
 		    int result = 0; 
-		  
-		    // it will store the count  
-		    // of continues same char 
+		    // it will store the count of same char 
 		    int[] sameChar = new int[n]; 
-		    for(int v = 0; v < n; v++) 
-		    sameChar[v] = 0; 
-		  
 		    int i = 0; 
-		  
-		    // traverse string character 
-		    // from left to right 
+		    // traverse string character from left to right 
 		    while (i < n)  { 
-		  
 		        // store same character count 
 		        int sameCharCount = 1; 
-		  
 		        int j = i + 1; 
 		  
 		        // count smiler character 
@@ -32,32 +22,25 @@ public class SpecialStringAgain {
 		        } 
 		  
 		        // Case : 1 
-		        // so total number of  
-		        // substring that we can 
-		        // generate are : K *( K + 1 ) / 2 
-		        // here K is sameCharCount 
+		        // total num of substring generated are : K *( K + 1 ) / 2   --K=sameCharCount 
 		        result += (sameCharCount * (sameCharCount + 1) / 2); 
-		  
-		        // store current same char  
-		        // count in sameChar[] array 
+		        // store current same char count in sameChar[] array 
 		        sameChar[i] = sameCharCount; 
-		  
 		        // increment i 
 		        i = j; 
 		    } 
 		  
-		    // Case 2: Count all odd length 
-		    //           Special Palindromic 
-		    //           substring 
+		    // Case 2: Count all odd length Special Palindromic substring 
 		    for (int j = 1; j < n; j++) { 
-		        // if current character is  
-		        // equal to previous one  
-		        // then we assign Previous  
-		        // same character count to 
-		        // current one 
+		        // if current character is equal to previous one then we assign Previous  
+		        // same character count to current one
+		    	// a a b a a a
+		    	// 2 _ 1 3 _ _  copy rest characters
 		        if (str.charAt(j) == str.charAt(j - 1)) 
 		            sameChar[j] = sameChar[j - 1]; 
 		  
+		        // aabaaa
+		        // 221333
 		        // case 2: odd length 
 		        if (j > 0 && j < (n - 1) && 
 		        (str.charAt(j - 1) == str.charAt(j + 1) && 
