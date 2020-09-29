@@ -1,28 +1,32 @@
 package String;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class commonChild {
 
+	/** Classic Dynamic Programming
+		with the matrix
+		bottom up approach
+		if both first chars equal then copy previous vertical diagonal
+		else max(previous, top)
+	 */
+	
 	public static int getTheCommonChild(String s1, String s2) {
-
-		int count = 0;
-		Map<Character, Integer> map1 = new HashMap<>();
-		Map<Character, Integer> map2 = new HashMap<>();
-
-		for(int i = 0; i < s1.length() ; i++) 
-			map1.put(s1.charAt(i), map1.getOrDefault(s1.charAt(i), 0)+1);
-		for(int i = 0; i < s2.length() ; i++) 
-			map1.put(s2.charAt(i), map2.getOrDefault(s2.charAt(i), 0)+1);
+		char[] A = s1.toCharArray(), B = s2.toCharArray();
+		int lenA = s1.length(), lenB = s2.length();
+		int[][] dp = new int[lenA + 1][lenB + 1];
 		
-		int len = map1.size() > map2.size() ? map1.size() : map2.size();
-		for(int i = 0 ; i < len ; i++) {
-			if(map.)
+		// apply the cases
+		for(int i = 1; i <= lenA ; i++) {
+			for(int j = 1 ; j <= lenB ; j++) {
+				if(A[i-1] == B[j-1]) {
+					dp[i][j] = dp[i-1][j-1] + 1;
+				}
+				else {
+					dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);
+				}
+			}
 		}
- 		
+		return dp[lenA][lenB];
 		
-		return count;
 	}
 	
 	public static void main(String[] args) {
