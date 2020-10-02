@@ -5,17 +5,24 @@ import java.util.Arrays;
 public class ArrayManipulation3D {
 	
 	public static long arrMan(int n , int [][] queries) {
-		int maxV = Integer.MIN_VALUE;
-		int low = queries[0][0], high = queries[0][1] , k = queries[0][2];
-		int x = 1;maxV = Math.max(maxV, k);
-		while(x < queries.length) {
-			low = queries[x][0];
-			if(low <= high) {
-				maxV = Math.max(maxV, maxV+queries[x][2]);
-			}
-			high = queries[x++][1];
-		}
+		// Dynamic Programming
+		// add the k value at index a
+		// subtract k at index b+1.. find max
 		
+		long[] arrMan = new long[n+2];
+		for(int i = 0 ; i < queries.length ; i++) {
+			arrMan[queries[i][0]] += queries[i][2];
+			// find the b index less than n to avoid out of bound
+			//if(queries[i][1]+1 < n) { // subtract the k value
+				arrMan[queries[i][1]+1] -= queries[i][2];
+			//}
+		}
+		long maxV = Long.MIN_VALUE, x = 0;
+		// add each value in the array. find the max
+		for(int i = 0 ; i < n+2 ; i++) {
+			x += arrMan[i];
+			maxV = Math.max(maxV, x);
+		}
 		return maxV;
 	}
 	
@@ -53,7 +60,12 @@ public class ArrayManipulation3D {
 		int[][] q = {{1,5,3},
 		             {4,8,7},
 		             {6,9,1}};
-		System.out.println("MAX v ? "+arrMan(10, q));
+//		System.out.println("MAX v ? "+arrMan(10, q));
+		int[][] q1 = {
+				{2, 3, 603},
+				{1, 1, 286},
+				{4, 4, 882}};
+		System.out.println(arrMan(4, q1));
 		
 	}
 }
