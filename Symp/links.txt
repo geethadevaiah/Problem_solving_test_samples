@@ -1,0 +1,4 @@
+https://resources.infosecinstitute.com/error-level-analysis-detect-image-manipulation/
+https://www.researchgate.net/publication/332561655_Image_forgery_detection_using_error_level_analysis_and_deep_learning
+https://www.researchgate.net/publication/332633501_Image_Forgery_Detection_Survey_and_Future_Directions
+https://www.academia.edu/37977449/Fake_Image_Detection_Using_Machine_Learning
