@@ -1,14 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// import Page from './components/Page'
 // import App from './App';
-import Greeting from './Greeting'
+// import Greeting from './components/Greeting'
+// import NumberList from './components/NumberList'
+// import Blog from './components/Blog'
+import NameForm from './components/NameForm'
 import * as serviceWorker from './serviceWorker';
 
+// const numbers = [1,2,3,4,5];
+// const posts = [
+//   {id : 1, title: "welcome1", content : "contentf shfjkdhs df sdhfjsd ffshdhfkjs "},
+//   {id : 2, title: "welcome2", content : "njbd fjsgfhjg gfugf gjsjk"}
+// ]
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Greeting />
+    {/* <Greeting /> */}
+    {/* <Page /> */}
+    {/* <NumberList numbers={numbers}/> */}
+    {/* <Blog posts={posts} /> */}
+
+    <NameForm />
   </React.StrictMode>,
   document.getElementById('root')
 );
