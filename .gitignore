@@ -41,3 +41,4 @@
 /*/*.gitignore
 .classpath
 .project
+/url-shortener/node_modules
