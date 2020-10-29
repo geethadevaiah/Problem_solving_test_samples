@@ -6,7 +6,10 @@ import './index.css';
 // import Greeting from './components/Greeting'
 // import NumberList from './components/NumberList'
 // import Blog from './components/Blog'
-import NameForm from './components/NameForm'
+// import NameForm from './components/NameForm'
+// import EssayForm from './components/EssayForm'
+// import Reservation from './components/Reservation'
+import Calculator from './components/Calculator'
 import * as serviceWorker from './serviceWorker';
 
 // const numbers = [1,2,3,4,5];
@@ -21,8 +24,10 @@ ReactDOM.render(
     {/* <Page /> */}
     {/* <NumberList numbers={numbers}/> */}
     {/* <Blog posts={posts} /> */}
-
-    <NameForm />
+    {/* <NameForm /> */}
+    {/* <EssayForm /> */}
+    <Calculator />
+    {/* <Reservation /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
