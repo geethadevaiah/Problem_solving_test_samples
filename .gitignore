@@ -41,4 +41,7 @@
 /*/*.gitignore
 .classpath
 .project
-/url-shortener/node_modules
+/url-shortener/node_modules/
+/React/node_modules/
+/React/react-trials/node_modules/
+/Express_test/node_modules/
