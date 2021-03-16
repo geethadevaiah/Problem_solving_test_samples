@@ -32,7 +32,7 @@ public class LongestPalindromicSubstring {
 						&& str.charAt(j) == str.charAt(end)// if boundary chars are same
 						) {// then it is a palindrome
 					dp[j][end] = 1;  // update the matrix
-					//maxLength = Math.max(maxLength, end-j+1); // update the maxlength from end index to length
+					// update the maxlength from end index to length
 					if(i >  maxLength) {
 						start = j;
 						maxLength = i;
@@ -40,11 +40,11 @@ public class LongestPalindromicSubstring {
 				}
 			}
 		}
-		return str.substring(start, maxLength);
+		return str.substring(start, start + maxLength);
 	}
 
 	public static void main(String[] args) {
-		System.out.println(longPalindromeSubstrFn("aabkdaa"));
+		System.out.println(longPalindromeSubstrFn("aabaaa"));
 	}
 
 }
