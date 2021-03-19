@@ -47,7 +47,7 @@ public class LetterCombinationsPhoneNumbers {
 	
 	
 	public static void main(String[] args) {
-		System.out.println(letterCombinationsFn("536"));
+		System.out.println(letterCombinationsFn("53"));
 	}
 
 }
