@@ -55,7 +55,6 @@ public class AggressiveCows {
 				high = mid - 1;
 			}
 		}
-		
 		return res;
 		
 	}
