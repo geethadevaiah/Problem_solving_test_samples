@@ -10,3 +10,13 @@ public class MainCallClass {
 		Car car2 = CarFactory.createCar("Basic");
 	}
 }
+
+
+/**
+ * 	FACTORY PATTERN
+ * 
+ * main method to include only the factory which creates the object => CarFactory
+ * CarFactory will take the String type as input which specifies which kind of object is required
+ * CarFactory is used to create produce the objects 
+ * 
+*/
