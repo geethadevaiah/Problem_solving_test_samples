@@ -1,4 +1,4 @@
-package DP;
+package Recursion;
 
 public class NQueensSolution {
 
@@ -46,16 +46,21 @@ public class NQueensSolution {
 		}
 		
 		for(int i = 0 ; i < 4 ; i++) {
+			// check if the queen is safe to place in that row & column
 			if(nqueenIsSafe(queens, r, i)) {
+				// if yes then make that 1 and hit for next row
 				queens[r][i] = 1;
 				nQueenSolution(queens, r+1); // hitting for next row
+				// make the content 0 since it has backtracked that result is not correct to check 
+				// the next row
 				queens[r][i] = 0;
 			}
 		}
 	}
 	
 	public static void main(String[] args) {
-		
+		// queens is 4 X 4 matrix initialized to 0
+		// r = 0 is the first row to start with
 		nQueenSolution(queens, 0);
 	}
 }
