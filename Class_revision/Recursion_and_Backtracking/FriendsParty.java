@@ -1,4 +1,4 @@
-package DesignPatterns.Builder;
+package Class_revision.Recursion_and_Backtracking;
 
 public class FriendsParty {
 	// given n number friends
