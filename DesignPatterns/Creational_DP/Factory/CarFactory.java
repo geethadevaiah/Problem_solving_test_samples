@@ -1,4 +1,4 @@
-package DesignPatterns.Factory;
+package DesignPatterns.Creational_DP.Factory;
 
 public interface CarFactory {
 
