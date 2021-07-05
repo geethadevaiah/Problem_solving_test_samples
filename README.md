@@ -6,4 +6,4 @@ Repository also contains Examples on
 1. Design Patterns
 2. React samples
 3. CSS utils & trials
-4. Some questions encountered during contests
+4. Misc Contest Questions
