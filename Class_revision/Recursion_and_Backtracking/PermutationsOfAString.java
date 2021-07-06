@@ -21,6 +21,13 @@ public class PermutationsOfAString {
 		}
 	}
 	
+	
+/**
+ * Print permutations to avoid duplicates
+ * 
+ * @param str
+ * @param perm
+ */
 public static void printPermutationsDup(String str, String perm) {
 		
 		if(str.length() == 0) {
@@ -38,12 +45,12 @@ public static void printPermutationsDup(String str, String perm) {
 				// remaining of the string
 				String ros = str.substring(0, i) + str.substring(i + 1);
 				// Attach the extracted character to the perm string
-				printPermutations(ros, perm + ch);
+				printPermutationsDup(ros, perm + ch);
 			}
 		}
 	}
 	
 	public static void main(String[] args) {
-		printPermutations("AAC", "" );
+		printPermutationsDup("AAC", "" );
 	}
 }
