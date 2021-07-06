@@ -1,4 +1,4 @@
-package DesignPatterns.Structural_DP.Observer_DP;
+package DesignPatterns.Behavioral_DP.Observer_DP;
 
 public class ObserverTest {
 

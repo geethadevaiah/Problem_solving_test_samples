@@ -1,4 +1,4 @@
-package DesignPatterns.Structural_DP.Strategy;
+package DesignPatterns.Behavioral_DP.Strategy;
 
 public class GooglePayWallet implements PaymentWallet {
 

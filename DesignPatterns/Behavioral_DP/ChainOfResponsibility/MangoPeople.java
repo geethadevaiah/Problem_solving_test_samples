@@ -1,4 +1,4 @@
-package DesignPatterns.Structural_DP.ChainOfResponsibility;
+package DesignPatterns.Behavioral_DP.ChainOfResponsibility;
 
 public class MangoPeople {
 
