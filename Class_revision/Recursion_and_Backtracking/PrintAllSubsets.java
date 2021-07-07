@@ -1,7 +1,12 @@
 package Class_revision.Recursion_and_Backtracking;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.List;
+import java.util.Queue;
+import java.util.Stack;
+import java.util.Vector;
 
 public class PrintAllSubsets {
 
@@ -24,24 +29,21 @@ public class PrintAllSubsets {
 	}
 	
 	// Using backtracking
-	public static void printSubsetsBacktracking(int[] arr, List<Integer> temp, int i, int n) {
+	public static void printSubsetsBacktracking(int[] arr, Deque<Integer> temp, int i, int n) {
 		
 		// Base case, print the subset list when the size is full
-		if(i == n) {
-			if(temp.size() > 0) {
-				for(int j = 0 ; j < temp.size() ; j++) {
-					System.out.print(temp.get(j));
-					return;
-				}
-				System.out.println();
-			}
+//		System.out.println("i = "+i+" n = "+n);
+		if(i >= n) {
+			if(temp.size() > 0)
+				System.out.println(temp);
+			return;
 		}
 		
 		// recursion
-		temp.add(arr[i]);
+		temp.addLast(arr[i]);
 		printSubsetsBacktracking(arr, temp, i+1, n);
-		System.out.println(temp.size());
-		temp.remove(temp.size()-1);
+//		System.out.println(temp.size());
+		temp.removeLast();
 		printSubsetsBacktracking(arr, temp, i+1, n);
 		
 	}
@@ -51,7 +53,7 @@ public class PrintAllSubsets {
 		
 		int arr[] = {1, 2, 3};
 //		printSubset(arr, 0, "");
-		List<Integer> list = new ArrayList<>();
+		Deque<Integer> list = new ArrayDeque<Integer>();
 		printSubsetsBacktracking(arr, list, 0, arr.length);
 	}
 	
