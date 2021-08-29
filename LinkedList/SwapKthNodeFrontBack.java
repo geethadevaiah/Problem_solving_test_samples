@@ -67,12 +67,12 @@ class LinkedList {
 					
 		// find X
 		Node X = head, prevX = null;
-		for(int i = 0 ; i < k ; i++) {
+		for(int i = 1 ; i < k ; i++) {
 			prevX = X;
 			X = X.next;
 		}
 		Node Y = head, prevY = null;
-		for(int i  = 0 ; i < n - k + 1 ; i++) {
+		for(int i  = 1 ; i < n - k + 1 ; i++) {
 			prevY = Y;
 			Y = Y.next;
 		}
