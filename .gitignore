@@ -39,6 +39,7 @@
 /InorderTraversal.class
 /*/*.class
 /*/*.gitignore
+*.gitignore
 .classpath
 .project
 /url-shortener/node_modules/
