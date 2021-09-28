@@ -1,4 +1,4 @@
-package Threads;
+package Java_concepts.Threads;
 
 import java.util.HashSet;
 import java.util.Set;

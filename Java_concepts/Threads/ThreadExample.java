@@ -1,4 +1,4 @@
-package Threads;
+package Java_concepts.Threads;
 /**
  * 
  * Extending the thread class
