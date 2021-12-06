@@ -26,7 +26,6 @@ public class Car {
 		this.brake = carBuilder.brake;
 		this.mirror = carBuilder.mirror;
 		this.seatCovers = carBuilder.seatCovers;
-		this.mirror = carBuilder.mirror;
 		this.musicSystem = carBuilder.musicSystem;
 	}
 
