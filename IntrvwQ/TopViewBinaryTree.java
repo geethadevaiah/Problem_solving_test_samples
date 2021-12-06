@@ -3,49 +3,23 @@ package IntrvwQ;
 import Tree.TreeNode;
 
 public class TopViewBinaryTree {
-
-	
-	
 	public static void topView(TreeNode root) {
-		
-		//base case
 		if(root == null) return;
 		System.out.println(root.val);
-		
-		// printing only the left elements
-		if(root.left != null)
-			topViewLeft(root.left);
-		
-		// right elements
-		if(root.right != null)
-			topViewRight(root.right);
-		
+		topViewLeft(root.left);// left elements
+		topViewRight(root.right); // right elements
 	}
 	
 	public static void topViewLeft(TreeNode node) {
-		
-		//base case
 		if(node == null) return;
-		
 		System.out.println(node.val);
-		
-		if(node.left != null)
-			topViewLeft(node.left);
-		
-		
+		topViewLeft(node.left);		
 	}
 	
 	public static void topViewRight(TreeNode node) {
-		
-		//base case
 		if(node == null) return;
-		
 		System.out.println(node.val);
-		
-		if(node.right != null)
-			topViewRight(node.right);
-		
-		
+		topViewRight(node.right);
 	}
 	
 	
