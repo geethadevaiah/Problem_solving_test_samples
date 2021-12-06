@@ -26,7 +26,7 @@ public class LongestIncreasingSubsequence {
 					max = Math.max(dp[j], max);
 				}
 			}
-			// so the dp at i will be one greater than max
+			// so the dp at i will be one greater than max ( since count is calculated not sum ) 
 			dp[i] = 1 + max;
 			// get the overall max as the last in dp may not be the max count
 			omax = Math.max(omax, dp[i]);
