@@ -1,6 +1,8 @@
 package Class_revision.Recursion_and_Backtracking;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class PermutationsOfAString {
@@ -50,7 +52,31 @@ public static void printPermutationsDup(String str, String perm) {
 		}
 	}
 	
+
+	/**
+	 * 
+	 * method to return the list of permutations
+	 * recursive
+	 * 
+	 * @param args
+	 */
+
+
+	public static void permutationList(String str, String perm, List<String> list){
+		
+		if(str.length() == 0) {
+			// now the str one permutation is formed so add to the list
+			list.add(perm);
+			return;
+		}
+		
+		
+	}
+	
 	public static void main(String[] args) {
 		printPermutationsDup("AAC", "" );
+		
+		// get the list of Permutation Strings
+		permutationList("AAC", "", new ArrayList<String>());
 	}
 }
