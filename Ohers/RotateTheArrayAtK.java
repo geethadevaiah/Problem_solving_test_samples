@@ -44,7 +44,7 @@ public class RotateTheArrayAtK {
 	public static void main(String[] args) {
 		int[] in = {1,2,3,4,5,6,7};
 		int k = 3;
-		rotate(in, k);
+		rotate1(in, k);
 		for(int i = 0 ; i < in.length ; i++)
 			System.out.println(in[i]);
 		int[] in1 = {-1,-100,3,99};

@@ -7,7 +7,7 @@ public class ProducerConsumer {
 	public static void main(String[] args) {
 		
 		// create pc object
-		final pc pc = new pc();
+		 pc pc = new pc();
 		
 		Thread t1 = new Thread(() -> {
 			pc.produce();

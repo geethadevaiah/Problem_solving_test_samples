@@ -7,6 +7,7 @@ public class BuyAnsSellStockOnlyOnce {
  		int maxProfit = 0;
  		
  		for(int i = 0 ; i < prices.length ; i++) {
+ 			// either the curr val has to be low, or it has to be the one used for profit (value check)
  			if(prices[i] < lowPrice) {
  				lowPrice = prices[i];
  			}

@@ -29,6 +29,5 @@ public class Rotate2DArrayClockwise {
 				matrix[j][i] = tmp;
 			}
 		}
-		
 	}
 }
